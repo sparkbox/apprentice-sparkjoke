@@ -1,0 +1,19 @@
+{
+  "name": "apprenticeship-sparkjoke",
+  "version": "1.0.0",
+  "description": "A simple joke generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sparkbox/apprenticeship-sparkjoke.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sparkbox/apprenticeship-sparkjoke/issues"
+  },
+  "homepage": "https://github.com/sparkbox/apprenticeship-sparkjoke#readme"
+}
