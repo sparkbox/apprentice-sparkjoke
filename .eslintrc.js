@@ -6,6 +6,10 @@ module.exports = {
   extends: [
     'eslint-config-airbnb-base',
   ],
+  globals: {
+    window: true,
+    document: true,
+  },
   parserOptions: {
     parser: 'babel-eslint',
   },
