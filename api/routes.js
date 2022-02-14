@@ -8,14 +8,17 @@ const init = async () => {
 
   server.route({
     method: 'GET',
-    path: '/',
-    handler: () => 'Home',
+    path: '/welcome',
+    handler: () => 'Hello World!',
   });
 
   server.route({
     method: 'GET',
-    path: '/welcome',
-    handler: () => 'Hello World!',
+    path: '/jokes',
+    handler: () => ({
+      setup: 'Joke setup',
+      punchline: 'Joke punchline',
+    }),
   });
 
   await server.start();
