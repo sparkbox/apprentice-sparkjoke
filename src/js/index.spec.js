@@ -1,5 +1,5 @@
 import '@testing-library/jest-dom';
-import { renderJoke } from './index.js';
+import { renderJoke } from './renderJoke';
 
 describe('Index.js', () => {
   beforeEach(() => {
