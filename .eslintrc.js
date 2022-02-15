@@ -23,6 +23,7 @@ module.exports = {
     {
       files: [
         '**/src/**/*.spec.js',
+        '**/api/**/*.spec.js',
       ],
       env: {
         jest: true,

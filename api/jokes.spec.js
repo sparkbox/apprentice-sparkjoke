@@ -1,5 +1,4 @@
-/* eslint-disable no-undef */
-import { getJokes } from './jokes';
+const { getJokes } = require('./jokes');
 
 describe('getJokes', () => {
   it('returns joke at index 12 when passing in 12 as argument', () => {
