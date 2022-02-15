@@ -1,4 +1,4 @@
-const { getJokes } = require('./jokes');
+import getJokes from './jokes';
 
 describe('getJokes', () => {
   it('returns joke at index 12 when passing in 12 as argument', () => {

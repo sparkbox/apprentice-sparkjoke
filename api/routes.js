@@ -1,4 +1,6 @@
-const Hapi = require('@hapi/hapi');
+import Hapi from '@hapi/hapi';
+
+import getJokes from './jokes';
 
 const init = async () => {
   const server = Hapi.server({
@@ -14,11 +16,8 @@ const init = async () => {
 
   server.route({
     method: 'GET',
-    path: '/jokes',
-    handler: () => ({
-      setup: 'Joke setup',
-      punchline: 'Joke punchline',
-    }),
+    path: '/jokes/{jokeIdx}',
+    handler: (request) => getJokes(request.params.jokeIdx),
   });
 
   await server.start();

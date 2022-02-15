@@ -1,5 +1,5 @@
-const jokeData = require('./jokes.json');
+import jokeData from './jokes.json';
 
-export function getJokes(jokeIdx) {
-  return jokeData[jokeIdx];
-}
+const getJokes = (jokeIdx) => jokeData[jokeIdx];
+
+export default getJokes;
