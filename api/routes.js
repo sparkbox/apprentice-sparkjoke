@@ -20,6 +20,16 @@ const init = async () => {
     handler: (request) => getJokes(request.params.jokeIdx),
   });
 
+  server.route({
+    method: 'GET',
+    path: '/jokes/',
+    handler: (request, h) => h.response({
+      statusCode: 400,
+      error: 'Bad Request',
+      message: 'No joke index provided',
+    }).code(400),
+  });
+
   await server.start();
   console.log('Server running on %s', server.info.uri);
 };
