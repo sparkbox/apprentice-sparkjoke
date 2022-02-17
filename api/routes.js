@@ -2,6 +2,10 @@ import Hapi from '@hapi/hapi';
 
 import getJokes from './jokes';
 
+const upperBound = require('../src/Utilities/upperBound.js');
+
+module.exports = upperBound;
+
 const init = async () => {
   const server = Hapi.server({
     port: 8081,
@@ -33,6 +37,12 @@ const init = async () => {
       error: 'Bad Request',
       message: 'No joke index provided',
     }).code(400),
+  });
+
+  server.route({
+    method: 'GET',
+    path: '/jokesUpperBound',
+    handler: () => upperBound,
   });
 
   await server.start();
