@@ -8,7 +8,7 @@
     "test:coverage": "npm run test -- --coverage",
     "lint": "eslint ./ --ignore-path .gitignore",
     "dev": "webpack serve --mode development",
-    "api": "node api/routes.js"
+    "api": "babel-node api/routes.js"
   },
   "repository": {
     "type": "git",
