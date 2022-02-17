@@ -5,4 +5,4 @@ function getUpperBound() {
   return jokeData.length;
 }
 
-export { getUpperBound };
+module.exports = getUpperBound();
