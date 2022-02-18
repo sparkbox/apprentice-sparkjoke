@@ -28,7 +28,7 @@ describe('jokeFetcher', () => {
     fetch.mockImplementationOnce(() => Promise.reject(new Error('Some Failure')));
     const joke = await jokeFetcher();
     expect(joke).toEqual({
-      setup: 'Sorry, we were unable to reterive a joke',
+      setup: 'Sorry, we were unable to retrieve a joke',
       punchline: 'Sadly this is not a joke',
     });
   });

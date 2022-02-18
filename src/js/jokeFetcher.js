@@ -5,7 +5,7 @@ export const jokeFetcher = async () => {
     return joke;
   } catch (err) {
     return {
-      setup: 'Sorry, we were unable to reterive a joke',
+      setup: 'Sorry, we were unable to retrieve a joke',
       punchline: 'Sadly this is not a joke',
     };
   }
