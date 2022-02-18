@@ -17,6 +17,11 @@ const init = async () => {
   server.route({
     method: 'GET',
     path: '/jokes/{jokeIdx}',
+    options:{
+      cors: {
+        origin: ['*'] //array of allowed origins            
+      },
+    },
     handler: (request) => getJokes(request.params.jokeIdx),
   });
 
