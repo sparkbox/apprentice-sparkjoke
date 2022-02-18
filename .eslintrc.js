@@ -29,5 +29,14 @@ module.exports = {
         jest: true,
       },
     },
+    {
+      files: [
+        '**/src/**/*.js',
+        '**/src/**/*.spec.js',
+      ],
+      env: {
+        browser: true,
+      },
+    },
   ],
 };
