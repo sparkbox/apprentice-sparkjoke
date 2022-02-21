@@ -2,9 +2,7 @@ import Hapi from '@hapi/hapi';
 
 import getJokes from './jokes';
 
-const upperBound = require('../src/Utilities/upperBound.js');
-
-module.exports = upperBound;
+import getUpperBound from '../src/Utilities/upperBound.js';
 
 const init = async () => {
   const server = Hapi.server({
@@ -42,7 +40,7 @@ const init = async () => {
   server.route({
     method: 'GET',
     path: '/jokesUpperBound',
-    handler: () => upperBound,
+    handler: () => getUpperBound(),
   });
 
   await server.start();

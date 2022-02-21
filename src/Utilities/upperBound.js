@@ -1,8 +1,5 @@
-const jokeData = require('../../api/jokes.json');
+import jokeData from '../../api/jokes.json';
 
-function getUpperBound() {
-  console.log(jokeData.length);
-  return jokeData.length - 1;
-}
+const getUpperBound = () => (jokeData.length - 1);
 
-module.exports = getUpperBound();
+export default getUpperBound;

@@ -1,5 +1,4 @@
-/* eslint-disable no-undef */
-import { getUpperBound } from './upperBound';
+import getUpperBound from './upperBound';
 
 describe('UpperBound', () => {
   it('returns the count of all the jokes', () => {
