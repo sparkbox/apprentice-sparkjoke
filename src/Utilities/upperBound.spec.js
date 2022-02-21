@@ -4,6 +4,6 @@ describe('UpperBound', () => {
   it('returns the count of all the jokes', () => {
     console.log(getUpperBound());
     const joke = getUpperBound();
-    expect(joke).toBe(30);
+    expect(joke).toBe(29);
   });
 });
