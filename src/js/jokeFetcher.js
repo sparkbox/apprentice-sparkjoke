@@ -1,6 +1,6 @@
-export const jokeFetcher = async () => {
+export const jokeFetcher = async (jokeIdx) => {
   try {
-    const result = await fetch('http://localhost:8081/jokes/0');
+    const result = await fetch(`http://localhost:8081/jokes/${jokeIdx}`);
     const joke = await result.json();
     return joke;
   } catch (err) {
