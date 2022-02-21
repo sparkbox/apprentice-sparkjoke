@@ -29,7 +29,7 @@ const init = async () => {
 
   server.route({
     method: 'GET',
-    path: '/jokes/',
+    path: '/jokes/{any*}',
     handler: (request, h) => h.response({
       statusCode: 400,
       error: 'Bad Request',
