@@ -17,11 +17,17 @@ afterEach(() => {
 
 describe('jokeFetcher', () => {
   it('fetches joke', async () => {
-    const joke = await jokeFetcher();
+    const joke = await jokeFetcher(0);
     expect(joke).toEqual({
       setup: 'Why did the chicken cross the playground?',
       punchline: 'To get to the other slide.',
     });
+  });
+
+  it('makes a call to the correct API endpoint', async () => {
+    await jokeFetcher(3);
+
+    expect(fetch).toHaveBeenCalledWith('http://localhost:8081/jokes/3');
   });
 
   it('returns error message on failure', async () => {
