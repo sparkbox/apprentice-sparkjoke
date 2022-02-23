@@ -40,6 +40,11 @@ const init = async () => {
   server.route({
     method: 'GET',
     path: '/jokesUpperBound',
+    options: {
+      cors: {
+        origin: ['*'], // array of allowed origins
+      },
+    },
     handler: () => getUpperBound(),
   });
 
