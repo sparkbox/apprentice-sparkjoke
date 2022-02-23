@@ -1,9 +1,7 @@
 import '../css/index.css';
-import { jokeFetcher } from './jokeFetcher';
+import { jokeFetcher, jokeFetcherUpperBounds } from './jokeFetcher';
 import { renderJoke } from './renderJoke';
 import { getNextJokeIdx } from './getNextJokeIdx';
-
-const UPPER_BOUND = 4;
 
 const addNextJoke = async (nextJokeIdx) => {
   const nextJoke = await jokeFetcher(nextJokeIdx);
@@ -11,9 +9,10 @@ const addNextJoke = async (nextJokeIdx) => {
   renderJoke(nextJoke);
 };
 
-const bindEventListenerToRefreshButton = (currentJokeIdx) => {
+const bindEventListenerToRefreshButton = async (currentJokeIdx) => {
   const refreshButton = document.getElementById('refresh');
   let currentJokeState = currentJokeIdx;
+  const UPPER_BOUND = await jokeFetcherUpperBounds();
 
   refreshButton.addEventListener('click', async (e) => {
     e.preventDefault();
