@@ -1,3 +1,13 @@
+export const jokeFetcherUpperBounds = async () => {
+  try {
+    const result = await fetch('http://localhost:8081/jokesUpperBound');
+    const limit = await result.json();
+    return limit;
+  } catch (err) {
+    return 0;
+  }
+};
+
 export const jokeFetcher = async (jokeIdx) => {
   try {
     const result = await fetch(`http://localhost:8081/jokes/${jokeIdx}`);
