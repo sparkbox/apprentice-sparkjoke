@@ -6,12 +6,13 @@ import { bindEventListenerToRefreshButton } from './bindEventListenerToRefreshBu
 
 const showInitialJoke = async () => {
   const upperBounds = await jokeFetcherUpperBounds();
-  const initialJoke = await jokeFetcher(
-    Math.floor(Math.random() * upperBounds + 1)
-  );
+
+  const jokeIndex = Math.floor(Math.random() * upperBounds + 1);
+
+  const initialJoke = await jokeFetcher(jokeIndex);
 
   renderJoke(initialJoke);
-  bindEventListenerToRefreshButton(0);
+  bindEventListenerToRefreshButton(jokeIndex);
 };
 
 showInitialJoke();
