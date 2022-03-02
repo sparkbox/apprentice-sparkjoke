@@ -1,7 +1,7 @@
 module.exports = {
-  collectCoverage: false,
+  collectCoverage: true,
   collectCoverageFrom: [
-    '<rootDir>/src//*.js',
+    '<rootDir>/src/**/*.js',
   ],
   moduleFileExtensions: ['js'],
   moduleNameMapper: {
