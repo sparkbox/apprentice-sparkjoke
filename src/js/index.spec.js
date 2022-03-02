@@ -16,12 +16,11 @@ jest.mock('./bindEventListenerToRefreshButton', () => ({
 
 jest.mock('./jokeFetcher', () => ({
   ...jest.requireActual('./jokeFetcher'),
- jokeFetcher: jest.fn(),
- jokeFetcherUpperBounds: jest.fn(),
+  jokeFetcher: jest.fn(),
+  jokeFetcherUpperBounds: jest.fn(),
 }));
 
 describe('showInitialJoke', () => {
-
   it('calls jokeFetcherUpperBounds', () => {
     showInitialJoke();
 
@@ -41,7 +40,6 @@ describe('showInitialJoke', () => {
   });
 
   it('calls bindEventListenerToRefreshButton', () => {
-
     showInitialJoke();
 
     expect(bindEventListenerToRefreshButton).toHaveBeenCalled();
