@@ -3,7 +3,7 @@ import { jokeFetcher, jokeFetcherUpperBounds } from './jokeFetcher';
 import { renderJoke } from './renderJoke';
 import { bindEventListenerToRefreshButton } from './bindEventListenerToRefreshButton';
 
-const showInitialJoke = async () => {
+export const showInitialJoke = async () => {
   const upperBounds = await jokeFetcherUpperBounds();
 
   const jokeIndex = Math.floor(Math.random() * upperBounds + 1);
