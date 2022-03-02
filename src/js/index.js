@@ -1,6 +1,5 @@
 import '../css/index.css';
-import { jokeFetcher } from './jokeFetcher';
-import { jokeFetcherUpperBounds } from './jokeFetcher';
+import { jokeFetcher, jokeFetcherUpperBounds } from './jokeFetcher';
 import { renderJoke } from './renderJoke';
 import { bindEventListenerToRefreshButton } from './bindEventListenerToRefreshButton';
 
