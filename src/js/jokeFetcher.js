@@ -8,7 +8,7 @@ export const jokeFetcherUpperBounds = async () => {
   }
 };
 
-export const jokeFetcher = async (jokeIdx = 0) => {
+export const jokeFetcher = async (jokeIdx) => {
   try {
     const result = await fetch(`http://localhost:8081/jokes/${jokeIdx}`);
     const joke = await result.json();

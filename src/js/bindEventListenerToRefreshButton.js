@@ -1,7 +1,7 @@
 import { getNextJokeIdx } from './getNextJokeIdx';
 import { addNextJoke } from './addNextJoke';
 
-export const bindEventListenerToRefreshButton = (currentJokeIdx = 0) => {
+export const bindEventListenerToRefreshButton = (currentJokeIdx) => {
   const refreshButton = document.getElementById('refresh');
   let currentJokeState = currentJokeIdx;
 
