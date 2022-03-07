@@ -4,6 +4,7 @@ import { showInitialJoke } from './index.js';
 import { bindEventListenerToRefreshButton } from './bindEventListenerToRefreshButton';
 import { jokeFetcher, jokeFetcherUpperBounds } from './jokeFetcher';
 
+
 jest.mock('./renderJoke', () => ({
   ...jest.requireActual('./renderJoke'),
   renderJoke: jest.fn(),
@@ -20,28 +21,28 @@ jest.mock('./jokeFetcher', () => ({
   jokeFetcherUpperBounds: jest.fn(),
 }));
 
-describe('showInitialJoke', () => {
+
+describe('showInitialJoke', () => { 
   it('calls jokeFetcherUpperBounds', () => {
+    jest.clearAllMocks();
+    
     showInitialJoke();
-
-    expect(jokeFetcherUpperBounds).toHaveBeenCalled();
+    
+    expect(jokeFetcherUpperBounds).toHaveBeenCalledTimes(1);
   });
-
+  
   it('calls jokeFetcher', () => {
-    showInitialJoke();
 
-    expect(jokeFetcher).toHaveBeenCalled();
+    expect(jokeFetcher).toHaveBeenCalledTimes(1);
   });
 
   it('calls renderJoke', () => {
-    showInitialJoke();
 
-    expect(renderJoke).toHaveBeenCalled();
+    expect(renderJoke).toHaveBeenCalledTimes(1);
   });
 
   it('calls bindEventListenerToRefreshButton', () => {
-    showInitialJoke();
 
-    expect(bindEventListenerToRefreshButton).toHaveBeenCalled();
+    expect(bindEventListenerToRefreshButton).toHaveBeenCalledTimes(1);
   });
 });
